@@ -12,6 +12,7 @@ body{
 }
 button{
     margin: 5px;
+    width: 220px;
     border: black 100px;
     border-radius: 5px;
     padding: 10px 30px;
@@ -29,6 +30,14 @@ button{
     color: white; 
 }
 #btnGoogle:hover{
+    background-color: black;
+    color: white; 
+}
+#btnFace:hover{
+    background-color: black;
+    color: white; 
+}
+#btnGuardar:hover{
     background-color: black;
     color: white; 
 }
@@ -51,3 +60,8 @@ input{
     justify-content: center;
 }
 
+.formulario{
+    display: none;
+    text-align: center;
+    
+}
