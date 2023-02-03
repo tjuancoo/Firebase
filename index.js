@@ -155,7 +155,7 @@ guardar.addEventListener("click", async () => {
 const providerFacebook = new FacebookAuthProvider();
 let facebook = document.getElementById("btnFace");
 facebook.addEventListener("click", function(){
-  signInWithPopup(auth, provider)
+  signInWithPopup(auth, providerFacebook)
   .then((result) => {
     // The signed-in user info.
     const user = result.user;
