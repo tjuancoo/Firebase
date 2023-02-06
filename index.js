@@ -119,10 +119,10 @@ google.addEventListener("click", function () {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       // The signed-in user info.
-      const user = result.email;
+      const user = result.user;
       document.getElementById('form').style.display = 'block';
       document.getElementById('reg').style.display = 'none';
-      usuario.innerHTML = `<p class="user">Bienvenido ${user} </p>`
+      usuario.innerHTML = `<p class="user">Bienvenido ${user.email} </p>`
       // ...
     }).catch((error) => {
       // Handle Errors here.
@@ -165,14 +165,14 @@ facebook.addEventListener("click", function(){
   signInWithPopup(auth, providerFacebook)
   .then((result) => {
     // The signed-in user info.
-    const user = result.email;
+    const user = result.user;
 
     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
     const credential = FacebookAuthProvider.credentialFromResult(result);
     const accessToken = credential.accessToken;
     document.getElementById('form').style.display = 'block';
     document.getElementById('reg').style.display = 'none';
-    usuario.innerHTML = `<p class="user">Bienvenido ${user} </p>`
+    usuario.innerHTML = `<p class="user">Bienvenido ${user.email} </p>`
     // ...
   })
   .catch((error) => {
