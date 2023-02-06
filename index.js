@@ -81,6 +81,8 @@ cerrar.addEventListener("click", function () {
     // Sign-out successful.
     alert("Has cerrado sesión correctamente")
     usuario.innerHTML = `<p></p>`
+    document.getElementById('form').style.display = 'none';
+    document.getElementById('reg').style.display = 'block';
     location.reload()
   }).catch((error) => {
     // An error happened.
@@ -117,7 +119,8 @@ google.addEventListener("click", function () {
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-
+      document.getElementById('form').style.display = 'block';
+      document.getElementById('reg').style.display = 'none';
       // ...
     }).catch((error) => {
       // Handle Errors here.
@@ -144,11 +147,13 @@ guardar.addEventListener("click", async () => {
       ApellidoPat: `${apPat.value}`,
       ApellidoMat: `${apMat.value}`
     });
+    alert("Se han guardado sus datos correctamente");
     document.getElementById('form').style.display = 'none';
     document.getElementById('reg').style.display = 'block';
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
+    alert("Error al guardar los datos")
   }
 });
 
@@ -163,7 +168,8 @@ facebook.addEventListener("click", function(){
     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
     const credential = FacebookAuthProvider.credentialFromResult(result);
     const accessToken = credential.accessToken;
-
+    document.getElementById('form').style.display = 'block';
+    document.getElementById('reg').style.display = 'none';
     // ...
   })
   .catch((error) => {
