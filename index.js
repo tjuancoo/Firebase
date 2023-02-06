@@ -63,7 +63,7 @@ iniciar.addEventListener('click', function () {
       alert("Has iniciado sesión correctamente " + user.email)
       // ...
 
-      usuario.innerHTML = `<p>Bienvenido ${user.email} </p>`
+      usuario.innerHTML = `<p class="user">Bienvenido ${user.email} </p>`
       document.getElementById('form').style.display = 'block';
       document.getElementById('reg').style.display = 'none';
 
@@ -83,6 +83,7 @@ cerrar.addEventListener("click", function () {
     usuario.innerHTML = `<p></p>`
     document.getElementById('form').style.display = 'none';
     document.getElementById('reg').style.display = 'block';
+    document.getElementById('user').style.display = 'none';
     location.reload()
   }).catch((error) => {
     // An error happened.
@@ -121,6 +122,7 @@ google.addEventListener("click", function () {
       const user = result.user;
       document.getElementById('form').style.display = 'block';
       document.getElementById('reg').style.display = 'none';
+      usuario.innerHTML = `<p class="user">Bienvenido ${user} </p>`
       // ...
     }).catch((error) => {
       // Handle Errors here.
@@ -170,6 +172,7 @@ facebook.addEventListener("click", function(){
     const accessToken = credential.accessToken;
     document.getElementById('form').style.display = 'block';
     document.getElementById('reg').style.display = 'none';
+    usuario.innerHTML = `<p class="user">Bienvenido ${user} </p>`
     // ...
   })
   .catch((error) => {
