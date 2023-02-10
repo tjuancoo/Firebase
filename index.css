@@ -7,7 +7,8 @@
 body{
     display: grid;
     height: 100vh;
-    background: linear-gradient(150deg, black, rgb(90, 89, 89))
+    background: linear-gradient(150deg, black, rgb(90, 89, 89));
+    place-content: center;
 }
 button{
     margin: 5px;
@@ -37,18 +38,30 @@ button{
     color: white; 
 }
 #btnCerrar:hover{
-    background-color: black;
+    background-color: rgb(148, 27, 27);
     color: white; 
 }
 #btnGoogle:hover{
-    background-color: black;
+    background-color: rgb(148, 27, 27)  ;
     color: white; 
 }
 #btnFace:hover{
-    background-color: black;
+    background-color: rgb(28, 53, 134);
     color: white; 
 }
 #btnGuardar:hover{
+    background-color: black;
+    color: white; 
+}
+#btnVer:hover{
+    background-color: black;
+    color: white; 
+}
+#btnEliminar:hover{
+    background-color: black;
+    color: white; 
+}
+#btnUpdate:hover{
     background-color: black;
     color: white; 
 }
@@ -67,7 +80,8 @@ input{
 }
 #user{
     color: white;
-    text-align: end;
+    text-align: center;
+    
 }
 
 .formulario{
@@ -77,5 +91,18 @@ input{
 }
 
 #reg,#form{
-    place-content: center;
+    
+}
+#form{
+    align-content: center;
+    justify-content: center;
+}
+#table{
+    display: none;
+    color: white;
+    padding: auto;
+    text-align: center;
+    border: solid 1px;
+    border-collapse: separate;
+    border-spacing: 20px;
 }
