@@ -65,6 +65,18 @@ button{
     background-color: black;
     color: white; 
 }
+#btnMapa:hover{
+    background-color: black;
+    color: white; 
+}
+#btnMapaHide:hover{
+    background-color: black;
+    color: white; 
+}
+#btnMapaHide{
+    display: none;
+    text-align: center;
+}
 input{
     margin: 5px;
     border: 1px solid;
@@ -96,6 +108,7 @@ input{
 #form{
     align-content: center;
     justify-content: center;
+    grid-column: 1;
 }
 #table{
     display: none;
@@ -105,4 +118,52 @@ input{
     border: solid 1px;
     border-collapse: separate;
     border-spacing: 20px;
+}
+#map{
+    display: none;
+    top: 0; 
+    bottom: 0;
+    width: 450px;
+    height: 490px;
+    
+}
+@media(max-width: 960px){
+    #map{
+        display: none;
+        top: 0; 
+        bottom: 0;
+        width: 450px;
+        height: 490px;
+        grid-column: 1/2;
+    }
+    body{
+        display: grid;
+        height: 150vh;
+        background: linear-gradient(150deg, black, rgb(90, 89, 89));
+        place-content: center;
+    }
+    #btnMapaHide{
+        display: none;
+        text-align: center;
+    }
+}
+@media(max-width: 720px){
+    #map{
+        display: none;
+        top: 0; 
+        bottom: 0;
+        width: 450px;
+        height: 490px;
+        grid-column: 1/2;
+    }
+    body{
+        display: grid;
+        height: 100vh;
+        background: linear-gradient(150deg, black, rgb(90, 89, 89));
+        place-content: center;
+    }
+    #btnMapaHide{
+        display: none;
+        
+    }
 }

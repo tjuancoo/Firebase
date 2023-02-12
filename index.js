@@ -236,6 +236,47 @@ facebook.addEventListener("click", function () {
 
 
 
+const mapa = document.getElementById("btnMapa");
+
+mapboxgl.accessToken = 'pk.eyJ1IjoidGp1YW5jbyIsImEiOiJjbGR2dXduYXkwMTh4M3FwNXVyYWFodWFuIn0.esaY0uHO26kEBfyZW7R3tQ';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+style: 'mapbox://styles/mapbox/streets-v12', // style URL
+center: [-74.5, 40], // starting position [lng, lat]
+zoom: 10 // starting zoom
+});
+
+const marker1 = new mapboxgl.Marker()
+.setLngLat([-74.5, 40])
+.addTo(map);
+ 
+ map.addControl(
+    new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+    })
+    );
+//Mostrar mapa
+mapa.addEventListener("click", function(){
+    document.getElementById("body").style.height = "200vh"
+        document.getElementById("map").style.display = "inline-block"
+        document.getElementById("btnMapa").style.display = "none"
+        document.getElementById("btnMapaHide").style.display = "inline-block"
+        document.getElementById("btnMapaHide").style.placeContent = "center";
+  })
+//Ocultar mapa
+  const mapaHide = document.getElementById("btnMapaHide")
+  mapaHide.addEventListener("click", function(){
+    document.getElementById("body").style.height = "100vh"
+        document.getElementById("map").style.display = "none"
+        document.getElementById("btnMapa").style.display = "inline-block"
+        document.getElementById("btnMapaHide").style.display = "none"
+        document.getElementById("btnMapa").style.placeContent = "center"
+  })
+
+
+
 
 
 

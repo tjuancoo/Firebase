@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Firebase</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 </head>
-<body>
+
+<body id="body">
     <nav id="user">
 
     </nav>
+
     <div class="container" id="reg">
         <input id="inEmail" type="email" placeholder="Correo"><br>
         <input id="inPass" type="password" placeholder="Contraseña"><br>
@@ -32,12 +38,21 @@
         <button id="btnUpdate" class="upd">Actualizar datos</button><br>
         <button id="btnEliminar" class="delete">Eliminar</button><br>
         <button id="btnCerrar" class="cerrar">Cerrar sesión</button><br>
-        
+        <button id="btnMapa" class="map">Mostrar mapa</button><br>
+        <button id="btnMapaHide" class="mapHide">Ocultar mapa</button><br>
         
     </div><br>
-    <table class="verDatos" id="table"></table>
+
+    <table class="verDatos" id="table">
+        
+    </table><br>
+
+    <div id="map">
+
+    </div>
 
     
     <script src="index.js" type="module"></script>
+    
 </body>
 </html>
