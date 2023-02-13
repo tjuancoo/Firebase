@@ -65,6 +65,14 @@ button{
     background-color: black;
     color: white; 
 }
+#btnGit{
+    background-color: black;
+    color: white; 
+}
+#btnGit:hover{
+    background-color: rgb(71, 70, 70);
+    color: white; 
+}
 #btnMapa:hover{
     background-color: black;
     color: white; 
@@ -113,7 +121,7 @@ input{
     color: white;
     padding: auto;
     text-align: center;
-    border: solid 1px;
+    
     border-collapse: separate;
     border-spacing: 20px;
 }
@@ -153,6 +161,7 @@ input{
         width: 350px;
         height: 590px;
         grid-column: 1/2;
+        
     }
     body{
         display: grid;
@@ -162,6 +171,9 @@ input{
     }
     #btnMapaHide{
         display: none;
+        
+    }
+    #table{
         
     }
 }
