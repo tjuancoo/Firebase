@@ -292,6 +292,7 @@ mapa.addEventListener("click", function(){
     document.getElementById('form').style.display = 'block';
     document.getElementById('reg').style.display = 'none';
     usuario.innerHTML = `<p class="user">Bienvenido ${user.email} </p>`
+    console.log(user)
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
