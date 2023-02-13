@@ -121,8 +121,8 @@ input{
     display: none;
     top: 0; 
     bottom: 0;
-    width: 450px;
-    height: 490px;
+    width: 1050px;
+    height: 790px;
     
 }
 @media(max-width: 960px){
@@ -130,8 +130,8 @@ input{
         display: none;
         top: 0; 
         bottom: 0;
-        width: 450px;
-        height: 490px;
+        width: 650px;
+        height: 690px;
         grid-column: 1/2;
     }
     body{
@@ -150,8 +150,8 @@ input{
         display: none;
         top: 0; 
         bottom: 0;
-        width: 450px;
-        height: 490px;
+        width: 350px;
+        height: 590px;
         grid-column: 1/2;
     }
     body{
