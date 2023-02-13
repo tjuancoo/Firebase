@@ -291,7 +291,7 @@ mapa.addEventListener("click", function(){
     // ...
     document.getElementById('form').style.display = 'block';
     document.getElementById('reg').style.display = 'none';
-    usuario.innerHTML = `<p class="user">Bienvenido ${user.email} </p>`
+    usuario.innerHTML = `<p class="user">Bienvenido ${user.reloadUserInfo.screenName} </p>`
     console.log(user)
   }).catch((error) => {
     // Handle Errors here.
